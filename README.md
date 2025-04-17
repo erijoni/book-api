@@ -72,8 +72,8 @@ You can now access the server at http://127.0.0.1:8000
 ## Folders
 
 - `app` - Contains all the Eloquent models and core logic of the application.
-- `app/Http/Controllers/Api` - Contains all the API controllers. This includes the `BookController` for managing books' CRUD operations (create, read, update, delete), and other logic for interacting with book data.
-  - `BookController.php` - Handles API requests related to book creation, updating, deleting, and fetching books.
+- `app/Http/Controllers` - Contains all the  controllers. This includes the `BookController` for managing books' CRUD operations (create, read, update, delete), and other logic for interacting with book data and also the Author Contoller.
+  - `BookController.php` - Handles  requests related to book creation, updating, deleting, and fetching books.
 - `app/Http/Resources` - Contains all the API resources. Resources transform the data before sending it in API responses.
   - `BookResource.php` - Transforms the `Book` model data into a structured response for the API. It is used to format the response for individual book records.
 - `app/Services` - Contains services responsible for handling business logic and external API calls. Services help keep controllers clean and focused on handling HTTP requests.
@@ -82,7 +82,6 @@ You can now access the server at http://127.0.0.1:8000
   - `Book.php` - The Eloquent model for the `books` table, representing a book record with fields like `title`, `isbn`, `author_id`, and `cover_image`.
   - `Author.php` - The Eloquent model for the `authors` table, representing an author. It is used in the `BookController` to fetch the associated author for each book.
 - `config` - Contains all the application configuration files, including settings for external services, validation rules, and other application-wide configurations.
-- `database/factories` - Contains model factories for generating dummy data. This is useful for testing or seeding the database with sample data.
 - `database/migrations` - Contains database migration files that define the structure of the database tables.
   - `create_books_table.php` - Migration file for creating the `books` table in the database.
   - `create_authors_table.php` - Migration file for creating the `authors` table in the database.
