@@ -15,7 +15,7 @@ Please check the official laravel installation guide for server requirements bef
 
 Clone the repository
 
-    git clone git@github.com:erijoni/book.git
+    git clone git@github.com:erijoni/book-api.git
 
 
 Install all the dependencies using composer
@@ -44,8 +44,8 @@ You can now access the server at http://127.0.0.1:8000
 
 **TL;DR command list**
 
-    git clone  git@github.com:erijoni/book.git
-    cd book-management-api
+    git clone  git@github.com:erijoni/book-api.git
+    cd bookManagment
     composer install
     cp .env.example .env
     php artisan migrate
