@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+Route::apiResource('books', BookController::class);
+Route::get('books/{id}', [BookController::class, 'showBook']);
+Route::get('/authors/all', [AuthorController::class, 'allAuthors']);
+Route::apiResource('authors', AuthorController::class);
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
